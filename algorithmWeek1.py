@@ -34,18 +34,42 @@
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # What is the largest prime factor of the number 600851475143 ?
 
+#Greg
+# number = 600851475143
+
+list =[]
 number = 600851475143
+for i in range(number):
+    list.append(i)
 
-i = 2
+for j in list:
+    if number % j == 0:
+        #remove all other numbers in list divisible by j
+        for k in range(j+1, number):
+            if k % j == 0:
+                list.remove(k)
+print list            
 
-while(i < number):
-    smallest_divisor = []
-    for j in range (2, i - 1):
-        if (i % j  == 0):
-            if (number % i == 0):
-                smallest_divisor.append(i)
-i += 1
-print smallest_divisor.pop()
+#Solution
+
+
+
+# known_prime = [2,3]
+# def is_prime(n):
+#     total_known_primes = len(known_prime)
+#     for i in range(0, total_known_primes):
+#         if(n % known_prime[i] == 0):
+#             return False
+#     else: 
+
+
+
+#         known_prime.append(n)
+#     if(i == total_known_primes):
+#         return True
+# print is_prime(24957243589743298457)
+
+
 
 
 
