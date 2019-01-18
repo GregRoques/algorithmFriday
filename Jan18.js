@@ -14,10 +14,10 @@ for (i=0;i<(numbersArray.length);i++){
 console.log(sum)
 
 
-    let newArray =[]
-    for (let i = 0; i < namesArray.length; i++){
-        if (namesArray[i] === (((namesArray[i].split('')).reverse()).join(""))){
-            newArray.push(namesArray[i])
-        }
+let newArray =[]
+for (let i = 0; i < namesArray.length; i++){
+    if (namesArray[i] === (((namesArray[i].split('')).reverse()).join(""))){
+        newArray.push(namesArray[i])
     }
-  console.log(newArray)
+}
+console.log(newArray)
