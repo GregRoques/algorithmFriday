@@ -45,7 +45,7 @@ for i in range(number):
 for j in list:
     if number % j == 0:
         #remove all other numbers in list divisible by j
-        for k in range(j+1, number):
+        for k in range(j, number):
             if k % j == 0:
                 list.remove(k)
 print list            
