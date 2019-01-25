@@ -7,19 +7,30 @@ function convertPhone(phonestr){
     for(i=0;i<phonestr.length;i++){
         let regEx = /\d/g;
         let correctPhone= phonestr[i].match(regEx);
-        // console.log(correctPhone)
+        // console.log(correctPhone[0])
+
+        
 
         if (correctPhone.length <10){
-            console.log("Invalid Number")
+            // console.log("Invalid Number")
         }else if (correctPhone.length >= 10){
-            // console.log(correctPhone)
+            if (correctPhone[0] == 1){
+                correctPhone.shift();
+                let tenDigit = correctPhone.slice(0,10);
+                tenDigit.splice(3,0,'-')
+                tenDigit.splice(7,0,'-');
+                let completeNumber = tenDigit.join("");
+                finalArray.push(completeNumber)
+            }else{
+
             let tenDigit = correctPhone.slice(0,10);
             tenDigit.splice(3,0,'-')
             tenDigit.splice(7,0,'-');
             let completeNumber = tenDigit.join("");
             finalArray.push(completeNumber)
-            console.log(finalArray)
+            }
         }
     }
+    console.log(finalArray)
 }
 convertPhone(array)
