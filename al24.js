@@ -1,4 +1,3 @@
-Sean McQuaid [5:12 PM]
 function repeatedString(s, n) {
    let remainder = n % s.length;
    let dividedNumber = Math.floor(n / s.length);
