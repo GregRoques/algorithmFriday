@@ -1,3 +1,5 @@
+//most common in an array or string & reverse string
+
 const myArray = ['dog','cat','fish','dog','cat','gerbil',
 'The Cure','cat','Robert Smith','apples','cat','tacos','pizza',
 'cat', 'pizza', 'pizza', 'Callie', "Midnight",
@@ -26,6 +28,7 @@ const philCollins = `Do you like Phil Collins? I've been a big Genesis fan ever 
 
 // const philArray = (philCollins.replace(/\s/g, "")).split("")
 const philArray = (philCollins).split(" ")
+
 // console.log(philArray)
 
 let newPhilArray = {}
@@ -43,4 +46,9 @@ const highestNumberPhil = Math.max(...Object.values(newPhilArray))
 const philAnswer = Object.keys(newPhilArray).filter(theObject => newPhilArray[theObject] === highestNumberPhil )
 
 // console.log(newPhilArray)
-console.log(philAnswer, highestNumberPhil)
+// console.log(philAnswer, highestNumberPhil)
+
+//Reversal
+const philArrayForReversal = (philCollins).split("")
+const reversedPhilArray = (philArrayForReversal.reverse()).join("")
+console.log(reversedPhilArray)
