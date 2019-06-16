@@ -1,3 +1,5 @@
+//Make array of "people" with particular hobbies
+
 function findHobbyists(hobbies, hobby) {
     let hobbiests = []
     Object.keys(hobbies).map(enthusiast =>{
@@ -20,19 +22,41 @@ function findHobbyists(hobbies, hobby) {
 
 // return original array without letters
 
+const newArray =[]
 function filterNumbersFromArray(arr) {
-    const newArray =[]
     arr.map(nonNum => {        
         if(!isNaN(nonNum)){
             newArray.push(nonNum)
         }
     })
     arr = newArray
-    console.log(arr)
   }
   
   var arr = [1, 'a', 'b', 2];
   filterNumbersFromArray(arr);
+  console.log(arr)
 
+// =============================================================================
+// Turn one card side up, all others upsidedown
 
-  
+var cards = document.getElementsByClassName('card');
+for (var i = 0; i < cards.length; i++) {
+    cards[i].onclick = function(value) {
+        [].forEach.call(cards, function(value) { 
+            card.innerHTML = "down" 
+        });
+        this.innerHTML = "up";
+    }
+}
+
+// =============================================================================
+// Make button with id = 'btn' dissapear for one second on click, then reappear
+
+const chooseButton = () =>{
+    document.getElementById('btn').style.visibility = 'hidden';
+    setTimeout(()=>{
+        document.getElementById('btn').style.visibility = 'visible';
+    }, 1000)
+}
+
+document.getElementById('btn').addEventListener('click', chooseButton())
