@@ -1,3 +1,17 @@
-const numArray = [25,15,6,73,47,2];
-numArray.sort((a, b) => a - b);
-console.log(numArray);
+function findHobbyists(hobbies, hobby) {
+    hobbies.map(enthusiast =>{
+        let hobbiests = []
+        if(enthusiast.inclues(hobby)){
+            hobbiests.push(enthusiast)
+        }
+        console.log(hobbiests)
+    })
+}
+  
+  var hobbies = {
+    "John": ['Piano', 'Puzzles', 'Yoga'],
+    "Adam": ['Drama', 'Fashion', 'Pets'],
+    "Mary": ['Magic', 'Pets', 'Reading']
+  };
+  
+  console.log(findHobbyists(hobbies, 'Yoga'));
