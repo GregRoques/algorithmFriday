@@ -25,9 +25,7 @@ function findHobbyists(hobbies, hobby) {
 const newArray =[]
 function filterNumbersFromArray(arr) {
     arr.map(nonNum => {        
-        if(!isNaN(nonNum)){
-            newArray.push(nonNum)
-        }
+        !isNaN(nonNum) ? newArray.push(nonNum) : null
     })
     arr = newArray
   }
