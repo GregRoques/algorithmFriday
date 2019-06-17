@@ -1,5 +1,5 @@
 const array = ['cat', 'Greg', 'dog', 'cat', 'Midnight', "Callie", "Nacheaux", "Midnight",
-'cat', 'burrito', 'taco', 'burrito']
+'cat', 'burrito', 'Margarita', 'taco', 'Margarita', 'burrito']
 
 const removeDuplicates = arr =>{
     let duplicatelessArray =[]
