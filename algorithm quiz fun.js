@@ -40,7 +40,7 @@ function filterNumbersFromArray(arr) {
 var cards = document.getElementsByClassName('card');
 for (var i = 0; i < cards.length; i++) {
     cards[i].onclick = function(value) {
-        [].forEach.call(cards, function(value) { 
+        [].forEach.call(cards, function(card) { 
             card.innerHTML = "down" 
         });
         this.innerHTML = "up";
