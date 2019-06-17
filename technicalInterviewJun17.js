@@ -44,26 +44,29 @@ arrayCreator(twoDimensionalArray)
 // console.log(twoDimensionalArray)
 
 // ================================================================================================
-// Make an elivator app
+// Make an elevator app
 
 var currentFloor = 1;
 async const elevator = floor =>{
     if (floor > currentFloor){
-        let up = floor - currentFloor;
-        await function goingUp(){
-            while(up){
-                setTimeout(()=>{
-                    console.log(currentFloor + 1)
-                    up -= 1
-                },1)
-            }
+        while(currentFloor != floor){
+            await setTimeout(()=>{
+                currentFloor += 1
+                console.log(currentFloor)
+            },1)
         }
-        currentFloor = floor
-    } else {
-        
-    }
+    } 
+    if (floor < currentFloor){
+        while(currentFloor != floor){
+            await setTimeout(()=>{
+                currentFloor -= 1
+                console.log(currentFloor)
+            },1)
+        }
+    } 
 }
 
+// elevator(5)
 
 // ================================================================================================
 // Write a recursive factorial function
