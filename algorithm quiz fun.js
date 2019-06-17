@@ -29,10 +29,20 @@ function filterNumbersFromArray(arr) {
     })
     arr = newArray
   }
+
+// ============================================ was having trouble with splice with my original logic
+//   function filterNumbersFromArray(arr) {
+//     arr.map(nonNum => {        
+//         isNaN(nonNum) ? arr.splice((arr.indexOf(nonNum), 1)) : null
+//     })
+//     arr = newArray
+//   }
   
   var arr = [1, 'a', 'b', 2];
   filterNumbersFromArray(arr);
   console.log(arr)
+
+
 
 // =============================================================================
 // Turn one card side up, all others upsidedown
