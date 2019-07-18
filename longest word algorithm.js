@@ -3,7 +3,7 @@
 
 const stuff = ['car', 'catch', 'burgerkingtacobell123', 'cat', 'tacobellburgerking321']
 
-let answer = 'hi'
+let answer = 'a'
 console.log(stuff.length)
 for(var i=0; i<stuff.length; i++){
     if(stuff[i].length > answer.length){
