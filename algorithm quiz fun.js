@@ -22,25 +22,18 @@ function findHobbyists(hobbies, hobby) {
 
 // return original array without letters
 
-const newArray =[]
+let anArray = ('blink182').split('')
 function filterNumbersFromArray(arr) {
-    arr.map(nonNum => {        
-        !isNaN(nonNum) ? newArray.push(nonNum) : null
+    newArray = []
+    arr.map((nonNum, i) => {        
+        !isNaN(nonNum) ? newArray.push(arr[i]) : null
     })
-    arr = newArray
+    anArray = newArray
   }
 
-// ============================================ was having trouble with splice with my original logic
-//   function filterNumbersFromArray(arr) {
-//     arr.map(nonNum => {        
-//         isNaN(nonNum) ? arr.splice((arr.indexOf(nonNum), 1)) : null
-//     })
-//     arr = newArray
-//   }
-  
-  var arr = [1, 'a', 'b', 2];
-  filterNumbersFromArray(arr);
-  console.log(arr)
+filterNumbersFromArray(anArray)
+console.log(anArray)
+
 
 
 
