@@ -18,7 +18,7 @@ myArray.map(anObject =>{
 const highestNumber = Math.max(...Object.values(newArray))
 
 const answer = Object.keys(newArray).filter(theObject =>{
-    newArray[theObject] === highestNumber 
+    return newArray[theObject] === highestNumber 
 })
 
 // console.log(newArray)
