@@ -15,8 +15,8 @@ console.log(newString2.join(''))
 // Palindrome check w/out spaces
 
 const isPalindrome = stringForward =>{
-    const stringForwardNoSpace = stringForward.replace(/\s/gi, '')
-    const stringBackward = stringForward.replace(/\s/gi, '').split('').reverse().join('')
+    const stringForwardNoSpace = stringForward.replace(/\s/gi, '').tolowercase()
+    const stringBackward = stringForwardNoSpace.split('').reverse().join('')
 
     stringForwardNoSpace === stringBackward ? console.log('Palindrome') : console.log ('No Palindrome')
 }

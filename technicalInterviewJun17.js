@@ -47,13 +47,13 @@ arrayCreator(twoDimensionalArray)
 // Make an elevator app
 
 var currentFloor = 1;
-async const elevator = floor =>{
+const elevator = async floor =>{
     if (floor > currentFloor){
         while(currentFloor != floor){
             await setTimeout(()=>{
                 currentFloor += 1
                 console.log(currentFloor)
-            },1)
+            },1000)
         }
     } 
     if (floor < currentFloor){
@@ -61,7 +61,7 @@ async const elevator = floor =>{
             await setTimeout(()=>{
                 currentFloor -= 1
                 console.log(currentFloor)
-            },1)
+            },1000)
         }
     } 
 }
@@ -72,7 +72,7 @@ async const elevator = floor =>{
 // Write a recursive factorial function
 
 const myFactorial = num =>{
-   return num !=1 ? num * myFactorial(num-1) : 1 //calls itself and reduces num by one if not one over and over
+   return num !=1 ? myFactorial(num-1) : 1 //calls itself and reduces num by one if not one over and over
 }
 
 // console.log(myFactorial(4))
