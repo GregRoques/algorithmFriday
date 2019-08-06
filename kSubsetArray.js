@@ -1,7 +1,7 @@
 // Find the number of subset arrays divisible by a single number
 // k = the divisible number; nums = array
 
-function kSub(k, nums) {
+const kSub = (k, nums) => {
     let answer = 0
     
     for(let i = 0; i<nums.length; i++){
