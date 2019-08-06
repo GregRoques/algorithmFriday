@@ -16,7 +16,7 @@ const kSub = (k, nums) => {
             })
             
             if(subArraySum % k === 0){
-                answer +=1
+                answer++
             }
         }
     }
