@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="coke.css">
+    <title>Vending Machine</title>
+</head>
+<body>
+    <h1>Coke Machine</h1>
+    <div class="machineBody">
+        <div class='title'>Items</div>
+        <div class="money">CANDY(.10)</div>
+        <div class="money">SNACK(.50)</div>
+        <div class="money">NUTS(.90)</div>
+        <div class="money">Coke(.25)</div>
+        <div class="money">Diet Coke(.50)</div>
+        <div class="money">Cookies(1.50)</div>
+        
+        <div class="questionForm">
+            <div class="consider"><b>Would you like to make a purchase?</b></div><br/>
+            <div>
+                <input placeholder='Y/N' type="text" name="yesOrNo" id="yesOrNo">
+            </div><br/>
+            <button onclick="yN(yesOrNo.value)">Yes or No</button>
+        </div>
+    </div>
+    
+    <script src="coke.js"></script>
+</body>
+</html>

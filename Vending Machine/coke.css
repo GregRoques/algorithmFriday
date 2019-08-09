@@ -1,0 +1,35 @@
+body{
+    text-align:center;
+}
+
+h1{
+    color:red;
+    font-weight: bolder;
+}
+
+.title{
+    font-weight: bold;
+    color:blue;
+    margin-bottom: 10px;
+}
+
+.money{
+    margin: 10px;
+}
+
+.money:hover{
+    text-decoration: underline;
+}
+
+.total{
+    font-weight: bold;
+    margin:10px;
+}
+
+.yourRefreshments{
+    font-weight: bolder;
+    font-style: italic;
+    color:blue;
+}
+
+
