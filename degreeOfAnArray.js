@@ -1,4 +1,7 @@
-const degreeOfAnArray = (t,n) =>{
+const degreeOfAnArray = (input) =>{
+    
+    const n = input.split('\n')[1].split(' ')
+    console.log(n)
     let contigiousSubarrays = {}
 
     for(let i = 0; i<=n.length -2; i++){
@@ -23,4 +26,5 @@ const degreeOfAnArray = (t,n) =>{
     console.log(answer)
 }
 
-degreeOfAnArray(5, [1,2,2,3,1])
+degreeOfAnArray(`5
+1 2 2 3 1`)
