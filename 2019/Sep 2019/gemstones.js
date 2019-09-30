@@ -10,7 +10,7 @@ const gemstones = arr => {
     }
 
     let finalCount = 0;
-    let firstCount = 0;
+    let firstCount;
     newArr.map(letter =>{
         finalCount += firstCount;
         firstCount = null;
