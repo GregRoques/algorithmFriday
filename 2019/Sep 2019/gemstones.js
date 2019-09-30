@@ -30,12 +30,3 @@ const gemstones = arr => {
 }
 const array = ["abcdde", "baccd", "eeabg" ]
 gemstones(array)
-
-// let answer = arr[0].split("")
-// for (let i = 1; i < arr.length; i++){
-//     answer = answer.filter(letter =>{
-//         return arr[i].includes(letter) ? letter : null
-//     })
-// }
-// console.log(answer, answer.length)
-// return answer.length
