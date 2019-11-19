@@ -1,3 +1,6 @@
+// Class - in object-oriented programming, an "extensible program-code-template for creating objects", 
+// providing initial values for state (member variables) and implementations of behavior (member functions or methods).
+
 class Dog {
     constructor(name) {
       this._name = name;

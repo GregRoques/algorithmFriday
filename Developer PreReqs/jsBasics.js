@@ -1,4 +1,6 @@
 //================================================================== A basic Higher Order Function
+// A higher order function is a function that takes a function as an argument, or returns a function.
+
 const checkConsistentOutput = (checkFunction, checkVariable) => {
     let answer =[]; 
     for (let i = 1; i < 3; i++){
@@ -17,9 +19,14 @@ const checkConsistentOutput = (checkFunction, checkVariable) => {
   }
   
 //   checkConsistentOutput(callBack, "Cat")
-//   ===========================================================================================================
+
+
 
 // ================================================================================================ Objects
+
+// An "object" is a collection of properties... a "property" is an association between a name (or key) and a value. 
+// A property's value can be a function, in which case the property is known as a method. 
+// In addition to objects that are predefined in the browser, you can define your own objects. 
 
 let spaceship = {
     'Fuel Type' : 'Turbo Fuel',
@@ -34,6 +41,8 @@ let spaceship = {
   delete spaceship['Secret Mission'] // haven't used this before
 //   console.log(spaceship)
 
+
+
 // ==================================================================================================================Methods
 
 let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
@@ -45,6 +54,8 @@ const alienShip = {
 }
 
 console.log(alienShip.takeOff())
+
+
 
 // ==================================================================================================================for...in
 

@@ -23,7 +23,7 @@ function withConstructor(num){
       if (num === 0){
         resolve('zero');
       } else {
-        resolve('not zero');
+        reject('not zero');
       }
     })
   }

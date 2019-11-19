@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="tableTest.css">
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+        <ul>
+            <li>Movie Name</li>
+            <li><input type="text" ng-model="name" /></li>
+        </ul>
+        <ul>
+            <li>Name of Director</li>
+            <li><input type="text" ng-model="director" /></li>
+        </ul>
+        <ul>
+            <li> </li><li><button ng-click="addRow()"> Add Row </button></li>
+        </ul>
+
+        <!--CREATE A TABLE-->
+        <table> 
+            <tr>
+                <th>Code</th>
+                    <th>Movie Name</th>
+                        <th>Director</th>
+            </tr>
+
+            <tr ng-repeat="movies in movieArray">
+                <td><label>{{$index + 1}}</label></td>
+                <td><label>{{movies.name}}</label></td>
+                <td><label>{{movies.director}}</label></td>
+                <td><input type="checkbox" ng-model="movies.Remove"/></td>
+            </tr>
+        </table>
+
+        <div>
+            <button ng-click="submit()">Submit Data</button>   
+                <button ng-click="removeRow()">Remove Row</button>
+        </div>
+
+        <div id="display" style="padding:10px 0;">{{display}}</div>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="tableTest.js"></script>
+    </div>
+</body>
+</html>

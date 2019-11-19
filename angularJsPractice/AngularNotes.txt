@@ -1,0 +1,41 @@
+Client Script
+Everything from the server’s data object can be accessed via c.data or $scope.data.
+If you change a value in the data model, use server.update() to post the entire data object to the server script as input.
+Note: After calling server.update() the client script’s data object is automatically overwritten with the server’s data object.
+Use c.options or scope.options to see what values were used to invoke the widget. This object is read-only and making changes will not be visible in the server script.
+Note: Only client scripts set with the UI type as Both or Mobile run in Service Portal.
+
+Server Script
+An empty data object is initialized.
+Use the input or options objects to get any data that was sent from the client controller or used to initialize the widget from the server.
+After the server script executes, the data object is json serialized and sent to the client controller.
+
+Additional Concepts
+Example Code:
+        <input class="form-control" type="search" placeholder="Start typing here to search 
+        the list of catalog items" ng-model="c.data.keywords" ng-change="c.server.update()" 
+
+ng-model-options="{debounce: 250}" />
+The search field in the example above uses 3 different angular directives:
+
+    ng-model	Automatically read and write value changes to the model variable c.data.keywords
+
+    ng-model-options	Configure how ng-model works, in this example only update the model after a user has stopped typing for 250 milliseconds
+
+    ng-change	After the model value changes, execute c.server.update()
+
+c.server.update()
+
+By default widgets are automatically created with an anonymous client controller function and the controller_as value of “c”. So c = the instance of the client script controller.
+
+Calling c.server.update() will post the data object to the server script. After the server script is executed the data object is automatically updated with the new values from the server’s generated data object.
+
+Ng-repeat
+Example Code:
+        <li class="list-group-item" ng-repeat="item in c.data.items">    
+            <a ng-href="#">{{item.name}}</a><span class="pull-right">{{item.price}}</span> 
+        </li> 
+
+If you’ve used angular before then you are already familiar with the ngRepeat directive but just in case you’re not here’s what’s going on:
+ng-repeat creates a template from the element it’s applied to, including child elements.
+For each item in c.data.items an instance of that template is created and the expressions {{item.name}} and {{item.price}} are replaced with the values from the item.

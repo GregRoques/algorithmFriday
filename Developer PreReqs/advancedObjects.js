@@ -159,6 +159,8 @@ const person = {
 //   ============================================================================================ Factory Functions
 
 // The Factory
+// In object-oriented programming, a factory is an object for creating other objects.
+
 const monsterFactory = (name, age, energySource, catchPhrase) => {
     return { 
       name: name,
@@ -215,3 +217,30 @@ console.log(robotEntries);
 const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
 
 console.log(newRobot);
+
+ //   =================================================================================== Object Prototypes
+
+//  The JavaScript prototype property allows you to add new properties to object constructors:
+
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
+
+
+// The JavaScript prototype property also allows you to add new methods to objects constructors:
+
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName;
+};
