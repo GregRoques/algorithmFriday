@@ -20,6 +20,11 @@ const checkConsistentOutput = (checkFunction, checkVariable) => {
   
 //   checkConsistentOutput(callBack, "Cat")
 
+//================================================================================================= autonomous self-calling function
+
+(function pokemonBattle (protagonist, antagonist){
+  console.log(`${protagonist} vs. ${antagonist}`)
+})('Pikachu', "Meowith")
 
 
 // ================================================================================================ Objects
